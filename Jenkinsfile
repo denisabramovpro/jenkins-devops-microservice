@@ -38,5 +38,16 @@ pipeline {
 				echo "INTEGRATION.........."
 			}
 		}
+	} 
+	post {
+		always {
+			echo "ALWAYS OPTION"
+		}
+		success {
+			echo "SUCCESS OPTION"
+		}
+		failure {
+			echo "FAILURE OPTION"
+		}
 	}
 }
