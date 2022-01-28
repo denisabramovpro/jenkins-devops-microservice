@@ -10,8 +10,33 @@
 // 	}
 // }
 
-node {
-	echo "BUILD"
-	echo "TEST"
-	echo "INTERGRATION TEST"
+//SCRIPTED
+// node {
+// 	echo "BUILD"
+// 	echo "TEST"
+// 	echo "INTERGRATION TEST"
+// }
+
+//DECLARATIVE
+pipeline {
+	agent any
+	stages {
+		stage("BUILD") {
+			steps {
+				echo "BUILD........."
+			}
+		}
+
+		stage("TEST") {
+			steps {
+				echo "TEST........."
+			}
+		}
+
+		stage("INTEGRATION") {
+			steps {
+				echo "INTEGRATION.........."
+			}
+		}
+	}
 }
